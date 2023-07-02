@@ -4,7 +4,7 @@
  *  No part of this assignment has been copied manually or electronically from any other source
  *  (including web sites) or distributed to other students.
  *
- *  Name: Alex Chu    Student ID: 153954219   Date: 2 Jul 2023
+ *  Name: Alex Chu    Student ID: 153954219   Date: 9 Jun 2023
  *  Demo: https://alexchu-web422-a3.vercel.app
  ********************************************************************************/
 import useSWR from "swr"
@@ -17,7 +17,7 @@ export default function Home() {
   const [page, setPage] = useState(1)
   const [pageData, setPageData] = useState([])
   const { data, error } = useSWR(
-    `https://alexchu-web422-a1.cyclic.app/api/movies?page=${page}&perPage=10`
+    `https://alexchu-web422-a1.vercel.app/api/movies?page=${page}&perPage=10`
   )
 
   useEffect(() => {
