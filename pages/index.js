@@ -17,7 +17,7 @@ export default function Home() {
   const [page, setPage] = useState(1)
   const [pageData, setPageData] = useState([])
   const { data, error } = useSWR(
-    `https://alexchu-web422-a1.vercel.app/api/movies?page=${page}&perPage=10`
+    `https://alexchu-web422-a1.cyclic.app/api/movies?page=${page}&perPage=10`
   )
 
   useEffect(() => {
