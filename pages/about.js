@@ -14,6 +14,7 @@ export async function getStaticProps() {
     return { props: { movie: data } }
   } catch (err) {
     console.log(err)
+    return { props: { movie: null } }
   }
 }
 
@@ -43,7 +44,7 @@ export default function About(props) {
           </ul>
           <Link href="/movies/Dark City">Link</Link>
         </Card.Body>
-        <MovieDetails movie={props.movie}></MovieDetails>
+        {props.movie && <MovieDetails movie={props.movie}></MovieDetails>}
       </Card>
     </>
   )
